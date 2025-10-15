@@ -1,0 +1,8 @@
+/home/yons/Desktop/deploy/realsense/build/CMakeFiles/recv_mjpeg.dir
+/home/yons/Desktop/deploy/realsense/build/CMakeFiles/recv_h264.dir
+/home/yons/Desktop/deploy/realsense/build/CMakeFiles/send_img.dir
+/home/yons/Desktop/deploy/realsense/build/CMakeFiles/send_img_h264.dir
+/home/yons/Desktop/deploy/realsense/build/CMakeFiles/edit_cache.dir
+/home/yons/Desktop/deploy/realsense/build/CMakeFiles/rebuild_cache.dir
+/home/yons/Desktop/deploy/realsense/build/library/robot_shared/CMakeFiles/edit_cache.dir
+/home/yons/Desktop/deploy/realsense/build/library/robot_shared/CMakeFiles/rebuild_cache.dir

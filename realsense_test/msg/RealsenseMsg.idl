@@ -1,0 +1,14 @@
+// RealsenseMsg.idl
+struct RealsenseMsg {
+  uint32 width;
+  uint32 height;
+  uint64 timestamp;
+
+  string color_encoding;
+  sequence<uint8> color_frame;  // JPET bytes stream
+  
+  //string depth_encoding;
+  //sequence<uint8> depth_frame;  // Depth PNG bytes stream
+  //float depth_scale;
+};
+
