@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: westlake_sdkpy
+Version: 1.0.1
+Summary: WestLake robot sdk version 1 for python
+Author: WLRobotics
+Author-email: 19179921356@163.com
+License: BSD-3-Clause
+Requires-Python: >=3.8
+Requires-Dist: cyclonedds==0.10.2
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pyyaml
