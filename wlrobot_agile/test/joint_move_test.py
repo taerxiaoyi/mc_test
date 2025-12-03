@@ -16,12 +16,12 @@ from config import Config
 import matplotlib.pyplot as plt
 from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
 from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
-ANIM_SEEK_LOWER = 1
-ANIM_SEEK_UPPER = 2
-ANIM_SEEK_DEFAULT = 3
-ANIM_FINISHED = 4
-ANIM_SEEK_SCALE = 5
-ANIM_SINE_CUSTOM = 6
+ANIM_SEEK_LOWER = 1  # 归位到下限位置模式
+ANIM_SEEK_UPPER = 2  # 归位到上限位置模式
+ANIM_SEEK_DEFAULT = 3  # 归位到默认位置模式
+ANIM_FINISHED = 4  # 运动结束状态
+ANIM_SEEK_SCALE = 5  # 按比例寻迹模式
+ANIM_SINE_CUSTOM = 6  # 新增正弦波自定义模式
 
 
 class Controller(BaseController):
@@ -165,7 +165,7 @@ def main():
     # args.joints = '18,25'  # 临时测试代码，指定多个关节
     # args.joints = '17,24'  # 临时测试代码，指定多个关节
     # args.joints = '16,23'  # 临时测试代码，指定多个关节
-    # args.joints = '15,22'  # 临时测试代码，指定多个关节
+    args.joints = '15,22'  # 临时测试代码，指定多个关节
     # args.joints = '14'  # 临时测试代码，指定多个关节
     # args.joints = '13'  # 临时测试代码，指定多个关节
     # args.joints = '12'  # 临时测试代码，指定多个关节
@@ -173,7 +173,7 @@ def main():
     # args.joints = '4,10'  # 临时测试代码，指定多个关节
     # args.joints = '3,9'  # 临时测试代码，指定多个关节
     # args.joints = '2,8'  # 临时测试代码，指定多个关节
-    args.joints = '1,7'  # 临时测试代码，指定多个关节
+    # args.joints = '1,7'  # 临时测试代码，指定多个关节
     # args.joints = '0,6'  # 临时测试代码，指定多个关节
 
     # args.joints = '0,2,3,4,5,7,8,9,10,15,16,17,18,19,20,21,22,23,24,25,26,27,28'  # 临时测试代码，指定多个关节

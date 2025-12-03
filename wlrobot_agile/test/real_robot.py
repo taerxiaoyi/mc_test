@@ -93,6 +93,17 @@ class E1RealEnv:
             # Initialize command message
             init_cmd_agile(self.low_cmd, self.mode_machine_, self.mode_pr_)
 
+    # def low_state_handler(self, msg: LowStateHG) -> None:
+    #     """
+    #     Process received robot state messages.
+        
+    #     Args:
+    #         msg: Received LowStateAG message
+    #     """
+    #     self.low_state = msg
+    #     self.mode_machine_ = self.low_state.mode_machine
+    #     self.remote_controller.set(self.low_state.wireless_remote)
+
     def LowStateHgHandler(self, msg: LowStateHG) -> None:
         """
         Process received robot state messages.

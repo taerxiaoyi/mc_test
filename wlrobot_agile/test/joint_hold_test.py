@@ -16,6 +16,9 @@ from config import Config
 import matplotlib.pyplot as plt
 from westlake_sdkpy.core.channel import ChannelFactoryInitialize
 
+# from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
+# from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
+
 
 ANIM_SEEK_LOWER = 1
 ANIM_SEEK_UPPER = 2
