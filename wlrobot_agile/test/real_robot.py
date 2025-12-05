@@ -2,18 +2,18 @@ from typing import Dict, List, Any, Optional
 import numpy as np
 import time
 
-# from westlake_sdkpy.core.channel import ChannelPublisher, ChannelSubscriber, ChannelFactoryInitialize
-# from westlake_sdkpy.idl.default import agile_msg_dds__LowCmd_, agile_msg_dds__LowState_
-# from westlake_sdkpy.idl.agile.msg.dds_ import LowCmd_ as LowCmdAG
-# from westlake_sdkpy.idl.agile.msg.dds_ import LowState_ as LowStateAG
+from westlake_sdkpy.core.channel import ChannelPublisher, ChannelSubscriber, ChannelFactoryInitialize
+from westlake_sdkpy.idl.default import agile_msg_dds__LowCmd_, agile_msg_dds__LowState_
+from westlake_sdkpy.idl.agile.msg.dds_ import LowCmd_ as LowCmdAG
+from westlake_sdkpy.idl.agile.msg.dds_ import LowState_ as LowStateAG
 
-from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
-from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
-from unitree_sdk2py.idl.default import unitree_hg_msg_dds__LowCmd_
-from unitree_sdk2py.idl.default import unitree_hg_msg_dds__LowState_
-from unitree_sdk2py.idl.unitree_hg.msg.dds_ import LowCmd_ as LowCmdHG
-from unitree_sdk2py.idl.unitree_hg.msg.dds_ import LowState_ as LowStateHG
-from unitree_sdk2py.utils.crc import CRC
+# from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
+# from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
+# from unitree_sdk2py.idl.default import unitree_hg_msg_dds__LowCmd_
+# from unitree_sdk2py.idl.default import unitree_hg_msg_dds__LowState_
+# from unitree_sdk2py.idl.unitree_hg.msg.dds_ import LowCmd_ as LowCmdHG
+# from unitree_sdk2py.idl.unitree_hg.msg.dds_ import LowState_ as LowStateHG
+# from unitree_sdk2py.utils.crc import CRC
 
 from common.command_helper import create_damping_cmd, create_zero_cmd, init_cmd_agile, MotorMode
 from common.remote_controller import RemoteController, KeyMap
@@ -70,19 +70,19 @@ class E1RealEnv:
             self.lowstate_subscriber = ChannelSubscriber(config.lowstate_topic, LowStateAG)
             self.lowstate_subscriber.Init(self.low_state_handler, 10)
 
-        elif config.msg_type == "hg":
-            self.low_cmd = unitree_hg_msg_dds__LowCmd_()
-            self.low_state = unitree_hg_msg_dds__LowState_()
+        # elif config.msg_type == "hg":
+        #     self.low_cmd = unitree_hg_msg_dds__LowCmd_()
+        #     self.low_state = unitree_hg_msg_dds__LowState_()
 
-            self.mode_pr_ = MotorMode.PR
-            self.mode_machine_ = 0
-            self.motor_mode = 1
+        #     self.mode_pr_ = MotorMode.PR
+        #     self.mode_machine_ = 0
+        #     self.motor_mode = 1
 
-            self.lowcmd_publisher_ = ChannelPublisher(_lowcmd_topic, LowCmdHG)
-            self.lowcmd_publisher_.Init()
+        #     self.lowcmd_publisher_ = ChannelPublisher(_lowcmd_topic, LowCmdHG)
+        #     self.lowcmd_publisher_.Init()
 
-            self.lowstate_subscriber = ChannelSubscriber(_lowstate_topic, LowStateHG)
-            self.lowstate_subscriber.Init(self.LowStateHgHandler, 10)
+        #     self.lowstate_subscriber = ChannelSubscriber(_lowstate_topic, LowStateHG)
+        #     self.lowstate_subscriber.Init(self.LowStateHgHandler, 10)
         else:
             raise ValueError(f"Unsupported msg_type: {config.msg_type}")
 
@@ -93,18 +93,7 @@ class E1RealEnv:
             # Initialize command message
             init_cmd_agile(self.low_cmd, self.mode_machine_, self.mode_pr_)
 
-    # def low_state_handler(self, msg: LowStateHG) -> None:
-    #     """
-    #     Process received robot state messages.
-        
-    #     Args:
-    #         msg: Received LowStateAG message
-    #     """
-    #     self.low_state = msg
-    #     self.mode_machine_ = self.low_state.mode_machine
-    #     self.remote_controller.set(self.low_state.wireless_remote)
-
-    def LowStateHgHandler(self, msg: LowStateHG) -> None:
+    def low_state_handler(self, msg: LowStateAG) -> None:
         """
         Process received robot state messages.
         
@@ -115,15 +104,26 @@ class E1RealEnv:
         self.mode_machine_ = self.low_state.mode_machine
         self.remote_controller.set(self.low_state.wireless_remote)
 
-    def send_cmd(self, cmd: LowStateHG) -> None:
-        """
-        Send control commands to the robot.
+    # def LowStateHgHandler(self, msg: LowStateHG) -> None:
+    #     """
+    #     Process received robot state messages.
         
-        Args:
-            cmd: Control command to send
-        """
-        cmd.crc = CRC().Crc(cmd)
-        self.lowcmd_publisher_.Write(cmd)
+    #     Args:
+    #         msg: Received LowStateAG message
+    #     """
+    #     self.low_state = msg
+    #     self.mode_machine_ = self.low_state.mode_machine
+    #     self.remote_controller.set(self.low_state.wireless_remote)
+
+    # def send_cmd(self, cmd: LowStateHG) -> None:
+    #     """
+    #     Send control commands to the robot.
+        
+    #     Args:
+    #         cmd: Control command to send
+    #     """
+    #     cmd.crc = CRC().Crc(cmd)
+    #     self.lowcmd_publisher_.Write(cmd)
 
     def wait_for_low_state(self, timeout: float = 10.0) -> None:
         """
@@ -136,7 +136,8 @@ class E1RealEnv:
             TimeoutError: If no data is received within the timeout period
         """
         start_time = time.time()
-        while self.low_state is None or self.low_state.tick == 0:
+        # while self.low_state is None or self.low_state.tick == 0:
+        while self.low_state is None or self.low_state.sequences == 0:
             if time.time() - start_time > timeout:
                 raise TimeoutError("Timeout waiting for robot state")
             time.sleep(self.config.control_dt)

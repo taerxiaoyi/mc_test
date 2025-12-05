@@ -1,0 +1,1 @@
+time,joint_idx,target_pos,actual_pos,target_vel,actual_vel,compute_torque,actual_torque,kp,kd,speed,error

@@ -1,4 +1,5 @@
-xml: "g1.xml"
+# xml: "g1.xml"
+xml: "o1_fixed.xml"
 control_dt: 0.02
 
 msg_type: "agile"     # "agile" or "dog"

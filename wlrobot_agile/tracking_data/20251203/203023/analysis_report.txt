@@ -1,0 +1,307 @@
+Robot Joint Control Performance Analysis Report
+============================================================
+
+Data File: state_read_test.csv
+Analysis Time: 2025-12-03 20:36:49
+Number of Joints: 29
+Time Range: 0.01 - 4.44 seconds
+Total Data Points: 6409
+
+Overall Performance Metrics:
+  Global RMS Error: 0.000000 rad
+  Global Max Absolute Error: 0.000000 rad
+  Global Mean Error: 0.000000 rad
+  Global Error Std Dev: 0.000000 rad
+
+Detailed Statistics by Joint:
+------------------------------------------------------------
+
+Joint 0: left_hip_pitch_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 1: left_hip_roll_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 2: left_hip_yaw_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 3: left_knee_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 4: left_ankle_pitch_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 5: left_ankle_roll_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 6: right_hip_pitch_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 7: right_hip_roll_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 8: right_hip_yaw_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 9: right_knee_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 10: right_ankle_pitch_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 11: right_ankle_roll_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 12: waist_yaw_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 13: waist_roll_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 14: waist_pitch_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 15: left_shoulder_pitch_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 16: left_shoulder_roll_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 17: left_shoulder_yaw_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 18: left_elbow_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 19: left_wrist_roll_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 20: left_wrist_pitch_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 21: left_wrist_yaw_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 22: right_shoulder_pitch_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 23: right_shoulder_roll_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 24: right_shoulder_yaw_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 25: right_elbow_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 26: right_wrist_roll_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 27: right_wrist_pitch_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm
+
+Joint 28: right_wrist_yaw_joint
+  Data Points: 221
+  Time Span: 4.43 s
+  Sampling Frequency: 49.8 Hz
+  RMS Error: 0.000000 rad
+  Max Absolute Error: 0.000000 rad
+  Mean Error: 0.000000 rad
+  Error Std Dev: 0.000000 rad
+  Max Computed Torque: 0.000 Nm

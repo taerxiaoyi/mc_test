@@ -1,0 +1,17 @@
+{
+  "test_name": "uniform_motion_test_joints_speed0.4_range-1_1",
+  "start_time": "2025-12-05 10:01:32",
+  "config_file": "unknown",
+  "preview_mode": true,
+  "visualization": false,
+  "joint_indices": [
+    0,
+    6
+  ],
+  "speed_scale": 0.4,
+  "min_range": -1,
+  "max_range": 1,
+  "duration": 4000,
+  "performance_stats": {},
+  "end_time": "2025-12-05 10:01:36"
+}

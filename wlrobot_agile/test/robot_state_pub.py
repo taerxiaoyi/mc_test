@@ -2,23 +2,23 @@ import time
 import numpy as np
 from typing import Dict, Any
 
-# from westlake_sdkpy.core.channel import ChannelPublisher, ChannelFactoryInitialize
-# from westlake_sdkpy.core.channel import ChannelSubscriber, ChannelFactoryInitialize
-# from westlake_sdkpy.idl.default import agile_msg_dds__LowCmd_
-# from westlake_sdkpy.idl.agile.msg.dds_ import LowCmd_
+from westlake_sdkpy.core.channel import ChannelPublisher, ChannelFactoryInitialize
+from westlake_sdkpy.core.channel import ChannelSubscriber, ChannelFactoryInitialize
+from westlake_sdkpy.idl.default import agile_msg_dds__LowCmd_
+from westlake_sdkpy.idl.agile.msg.dds_ import LowCmd_
 
-# from westlake_sdkpy.idl.default import agile_msg_dds__LowState_
-# from westlake_sdkpy.idl.agile.msg.dds_ import LowState_
-# from westlake_sdkpy.utils.thread import RecurrentThread
+from westlake_sdkpy.idl.default import agile_msg_dds__LowState_
+from westlake_sdkpy.idl.agile.msg.dds_ import LowState_
+from westlake_sdkpy.utils.thread import RecurrentThread
 
-from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
-from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
-from unitree_sdk2py.idl.default import unitree_hg_msg_dds__LowCmd_
-from unitree_sdk2py.idl.default import unitree_hg_msg_dds__LowState_
-from unitree_sdk2py.idl.unitree_hg.msg.dds_ import LowCmd_
-from unitree_sdk2py.idl.unitree_hg.msg.dds_ import LowState_
-from unitree_sdk2py.utils.crc import CRC
-from unitree_sdk2py.utils.thread import RecurrentThread
+# from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
+# from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
+# from unitree_sdk2py.idl.default import unitree_hg_msg_dds__LowCmd_
+# from unitree_sdk2py.idl.default import unitree_hg_msg_dds__LowState_
+# from unitree_sdk2py.idl.unitree_hg.msg.dds_ import LowCmd_
+# from unitree_sdk2py.idl.unitree_hg.msg.dds_ import LowState_
+# from unitree_sdk2py.utils.crc import CRC
+# from unitree_sdk2py.utils.thread import RecurrentThread
 from config import Config
 from functools import partial
 
@@ -37,7 +37,8 @@ class RobotStateSimulator:
             config: Configuration object with parameters for simulation
         """
         self.control_dt = 0.002  # 2ms control cycle
-        self.lowstate = unitree_hg_msg_dds__LowState_()
+        # self.lowstate = unitree_hg_msg_dds__LowState_()
+        self.lowstate = agile_msg_dds__LowState_()
         
         # Default configuration if none provided
         if config is None:
@@ -121,8 +122,10 @@ class RobotStateSimulator:
                 
     def publish_state(self):
         """Publish the current simulated state."""
-        self.tick += 1
-        self.lowstate.tick = self.tick
+        # self.tick += 1
+        # self.lowstate.tick = self.tick
+        self.sequences += 1
+        self.lowstate.sequences = self.sequences
         self.lowstate.mode_machine = self.mode_machine
         self.lowstate.wireless_remote = self.wireless_remote
         
@@ -183,7 +186,7 @@ if __name__ == '__main__':
     # Initialize DDS
     ChannelFactoryInitialize(0)
     
-    config_path = "test/g1.yaml"
+    config_path = "test/o1.yaml"
     config = Config(config_path)
     
     # Create and start the simulator

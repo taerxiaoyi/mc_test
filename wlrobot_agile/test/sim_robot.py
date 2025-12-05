@@ -59,8 +59,8 @@ class E1SimEnv():
     @staticmethod
     def step_thread():
         max_fps = E1SimEnv._max_fps
-        # model = mujoco.MjModel.from_xml_path("resources/robots/o1/o1_fixed.xml")
-        model = mujoco.MjModel.from_xml_path("resources/robots/g1/g1_fixed.xml")
+        model = mujoco.MjModel.from_xml_path("resources/robots/o1/o1_fixed.xml")
+        # model = mujoco.MjModel.from_xml_path("resources/robots/g1/g1_fixed.xml")
 
 
         model.opt.timestep = 1./max_fps

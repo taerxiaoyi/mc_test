@@ -1,0 +1,11 @@
+{
+  "test_name": "state_read_test",
+  "start_time": "2025-12-05 10:05:58",
+  "config_file": "unknown",
+  "preview_mode": false,
+  "visualization": false,
+  "test_mode": "state_read",
+  "duration": 3000,
+  "performance_stats": {},
+  "end_time": "2025-12-05 10:05:58"
+}

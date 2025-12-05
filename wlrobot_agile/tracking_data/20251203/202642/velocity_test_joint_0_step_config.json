@@ -1,0 +1,15 @@
+{
+  "test_name": "velocity_test_joint_0_step",
+  "start_time": "2025-12-03 20:26:42",
+  "config_file": "unknown",
+  "preview_mode": true,
+  "visualization": false,
+  "performance_stats": {
+    "avg_control_time": 0.020259222984313964,
+    "max_control_time": 0.0232391357421875,
+    "min_control_time": 0.020035266876220703,
+    "control_frequency": 49.360234633592135,
+    "total_runtime": 67.50068640708923
+  },
+  "end_time": "2025-12-03 20:27:50"
+}

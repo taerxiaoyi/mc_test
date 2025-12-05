@@ -14,9 +14,11 @@ from real_robot import E1RealEnv
 from base_controller import BaseController
 from config import Config
 import matplotlib.pyplot as plt
-# from westlake_sdkpy.core.channel import ChannelFactoryInitialize
-from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
-from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
+
+from westlake_sdkpy.core.channel import ChannelFactoryInitialize
+
+# from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
+# from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
 
 class Controller(BaseController):
     def __init__(self, config: Config, test_name: str, visualization: bool = False) -> None:
@@ -219,7 +221,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="机器人状态读取测试")
-    parser.add_argument("--config", type=str, help="configs文件夹中的配置文件名称", default="g1.yaml")
+    parser.add_argument("--config", type=str, help="configs文件夹中的配置文件名称", default="o1.yaml")
     parser.add_argument("--test_mode", type=str, choices=['state_read', 'limit_check', 'damping_test'], 
                        default='state_read', help="测试模式")
     parser.add_argument("--duration", type=int, help="测试持续时间（秒）", default=3000)

@@ -1,0 +1,15 @@
+{
+  "test_name": "state_read_test",
+  "start_time": "2025-12-05 10:05:08",
+  "config_file": "unknown",
+  "preview_mode": false,
+  "visualization": false,
+  "performance_stats": {
+    "avg_control_time": 0.020269560813903808,
+    "max_control_time": 0.023988962173461914,
+    "min_control_time": 0.020021677017211914,
+    "control_frequency": 49.33506005290725,
+    "total_runtime": 12.60058307647705
+  },
+  "end_time": "2025-12-05 10:05:20"
+}

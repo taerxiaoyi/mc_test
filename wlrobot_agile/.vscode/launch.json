@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+
+            // 关键点 1：使用你选的解释器
+            "python": "${command:python.interpreterPath}",
+
+            // 关键点 2：强制设置工作目录为项目根目录
+            "cwd": "${workspaceFolder}",
+
+            // 关键点 3：项目根加到 PYTHONPATH
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+
+            "justMyCode": false,
+
+            // // ⭐ 在这里加参数
+            // "args": [
+            //     "--config", "config.yaml"
+            // ]
+        }
+    ]
+}

@@ -14,8 +14,12 @@ from real_robot import E1RealEnv
 from base_controller import BaseController
 from config import Config
 import matplotlib.pyplot as plt
-from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
-from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
+
+from westlake_sdkpy.core.channel import ChannelFactoryInitialize
+
+# from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
+# from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
+
 ANIM_SEEK_LOWER = 1  # 归位到下限位置模式
 ANIM_SEEK_UPPER = 2  # 归位到上限位置模式
 ANIM_SEEK_DEFAULT = 3  # 归位到默认位置模式
@@ -142,7 +146,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="机器人关节均匀运动测试")
-    parser.add_argument("--config", type=str, help="configs文件夹中的配置文件名称", default="g1.yaml")
+    parser.add_argument("--config", type=str, help="configs文件夹中的配置文件名称", default="o1.yaml")
     parser.add_argument("--joint_idx", type=int, help="要控制的关节索引", default=0)
     parser.add_argument("--joints", type=str, help="要控制的多个关节索引,用逗号分隔,例如:0,1,2", default=None)
     parser.add_argument("--speed_scale", type=float, help="0.0到1.0之间的速度比例值", default=0.4)
@@ -165,7 +169,7 @@ def main():
     # args.joints = '18,25'  # 临时测试代码，指定多个关节
     # args.joints = '17,24'  # 临时测试代码，指定多个关节
     # args.joints = '16,23'  # 临时测试代码，指定多个关节
-    args.joints = '15,22'  # 临时测试代码，指定多个关节
+    # args.joints = '15,22'  # 临时测试代码，指定多个关节
     # args.joints = '14'  # 临时测试代码，指定多个关节
     # args.joints = '13'  # 临时测试代码，指定多个关节
     # args.joints = '12'  # 临时测试代码，指定多个关节
@@ -174,7 +178,7 @@ def main():
     # args.joints = '3,9'  # 临时测试代码，指定多个关节
     # args.joints = '2,8'  # 临时测试代码，指定多个关节
     # args.joints = '1,7'  # 临时测试代码，指定多个关节
-    # args.joints = '0,6'  # 临时测试代码，指定多个关节
+    args.joints = '0,6'  # 临时测试代码，指定多个关节
 
     # args.joints = '0,2,3,4,5,7,8,9,10,15,16,17,18,19,20,21,22,23,24,25,26,27,28'  # 临时测试代码，指定多个关节
     # args.joints = '6,7,8,9,10,11'  # 临时测试代码，指定多个关节

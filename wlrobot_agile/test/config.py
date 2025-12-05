@@ -11,6 +11,7 @@ class Config:
             self.kds = config["kds"]
             self.joint_names = config["joint_names"]
             self.default_joint_pos = np.array(config["default_joint_pos"], dtype=np.float32)
+            # self.cont_pos1 = np.array(config["cont_pos1"], dtype=np.float32)
             self.num_joints = config["num_joints"]
             self.dof_lower = config["dof_lower"]
             self.dof_upper = config["dof_upper"] 
